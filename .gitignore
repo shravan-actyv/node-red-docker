@@ -1,0 +1,8 @@
+node-red/*
+!node-red/package.json
+!node-red/package-lock.json
+!node-red/flows.json
+!node-red/flows_cred.json
+!node-red/settings.js
+
+node_modules

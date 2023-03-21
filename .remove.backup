@@ -1,0 +1,545 @@
+[
+    {
+        "id": "c3934c17f980f0bf",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0344cb8d958bc412",
+        "type": "tab",
+        "label": "Enterprise Connect",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "13066013742ff021",
+        "type": "SFTP-credentials",
+        "host": "43.204.74.60",
+        "port": "22",
+        "username": "apl_uat_sftp",
+        "password": "14UiqD1LvPobOpZIC8"
+    },
+    {
+        "id": "e5056d412a922b6c",
+        "type": "inject",
+        "z": "c3934c17f980f0bf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "f775e2ed7bf7d5b2"
+            ]
+        ]
+    },
+    {
+        "id": "d055ea56ca9df021",
+        "type": "debug",
+        "z": "c3934c17f980f0bf",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "961ef92a6531ca56",
+        "type": "http request",
+        "z": "c3934c17f980f0bf",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://actyv-platform-go-service.qa.actyv.com/api/bank-product-config/key/AXISTESTKEY",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 100,
+        "wires": [
+            [
+                "a88c833287806325"
+            ]
+        ],
+        "info": "Get The bank product config by key"
+    },
+    {
+        "id": "a88c833287806325",
+        "type": "function",
+        "z": "c3934c17f980f0bf",
+        "name": "Authenticate user",
+        "func": "msg.headers = {}\nmsg.method = \"POST\"\nmsg.url = \"https://actyv-platform-admin-service.qa.actyv.com/api/user/authenticateUser\";\nmsg.headers[\"content-type\"] = \"application/json\"\n\n\nmsg.payload = {\n   \n    \"email\": \"admin@actyv.com\",\n    \"password\": \"890ioP@12\"\n\n};\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f775e2ed7bf7d5b2",
+        "type": "SFTP-main",
+        "z": "c3934c17f980f0bf",
+        "path": "/",
+        "method": "list",
+        "remoteFilePath": "/sftpdir/test",
+        "remoteFilePathType": "str",
+        "localFilePath": "C:\\Users\\Ayush Rarg\\OneDrive - actyv.ai\\Desktop\\node-red",
+        "localFilePathType": "str",
+        "server": "13066013742ff021",
+        "outputs": 1,
+        "debug": false,
+        "name": "lisitng the files from sftp",
+        "x": 270,
+        "y": 220,
+        "wires": [
+            [
+                "81ac252480abc9ed"
+            ]
+        ]
+    },
+    {
+        "id": "81ac252480abc9ed",
+        "type": "SFTP-main",
+        "z": "c3934c17f980f0bf",
+        "path": "/",
+        "method": "get",
+        "remoteFilePath": "payload",
+        "remoteFilePathType": "msg",
+        "localFilePath": "/Users/shravanpm/Desktop/node-red",
+        "localFilePathType": "str",
+        "server": "13066013742ff021",
+        "outputs": 1,
+        "debug": false,
+        "name": "get a single file from sftp",
+        "x": 550,
+        "y": 220,
+        "wires": [
+            [
+                "74a72f1f0b9523a7"
+            ]
+        ]
+    },
+    {
+        "id": "74a72f1f0b9523a7",
+        "type": "file in",
+        "z": "c3934c17f980f0bf",
+        "name": "",
+        "filename": "payload[0]",
+        "filenameType": "msg",
+        "format": "stream",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "utf8",
+        "allProps": false,
+        "x": 800,
+        "y": 220,
+        "wires": [
+            [
+                "20a75b5a25083941"
+            ]
+        ]
+    },
+    {
+        "id": "ec134fc77817d436",
+        "type": "sheet",
+        "z": "c3934c17f980f0bf",
+        "name": "OUTSTANDING",
+        "sheetName": "Sheet1",
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "1c0f5601a2298f0c"
+            ]
+        ]
+    },
+    {
+        "id": "1c0f5601a2298f0c",
+        "type": "sheet-to-json",
+        "z": "c3934c17f980f0bf",
+        "name": "",
+        "raw": "false",
+        "range": "",
+        "header": "default",
+        "blankrows": false,
+        "x": 350,
+        "y": 300,
+        "wires": [
+            [
+                "17065f52325b2553"
+            ]
+        ]
+    },
+    {
+        "id": "481d648e18860d2c",
+        "type": "function",
+        "z": "c3934c17f980f0bf",
+        "name": "Authenticate user",
+        "func": "msg.headers = {\n    \n}\nmsg.method = \"POST\"\nmsg.url = \"https://actyv-platform-admin-service.qa.actyv.com/api/user/authenticateUser\";\nmsg.headers[\"content-type\"] = \"application/json\"\n\n\nmsg.payload = {\n   \n    \"email\": \"admin@actyv.com\",\n    \"password\": \"890ioP@12\"\n\n};\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "17065f52325b2553",
+        "type": "function",
+        "z": "c3934c17f980f0bf",
+        "name": "function 1",
+        "func": "let res = []\nfor(let i=1;i<msg.payload.length;i++){\n    // console.log(msg.payload[i])\n    res.push(msg.payload[i])\n}\nmsg.res = res\nmsg.payload = res\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 140,
+        "y": 380,
+        "wires": [
+            [
+                "c3ccf867e928664f"
+            ]
+        ]
+    },
+    {
+        "id": "20a75b5a25083941",
+        "type": "book",
+        "z": "c3934c17f980f0bf",
+        "name": "",
+        "raw": false,
+        "x": 950,
+        "y": 220,
+        "wires": [
+            [
+                "ec134fc77817d436"
+            ]
+        ]
+    },
+    {
+        "id": "3906c7a6f6dcc843",
+        "type": "debug",
+        "z": "c3934c17f980f0bf",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "5b7b6db4b5b96393",
+        "type": "debug",
+        "z": "c3934c17f980f0bf",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "c3ccf867e928664f",
+        "type": "array-loop",
+        "z": "c3934c17f980f0bf",
+        "name": "loop",
+        "key": "payload[\"S.No.\"]",
+        "keyType": "msg",
+        "reset": true,
+        "resetValue": "value-null",
+        "array": "res",
+        "arrayType": "msg",
+        "x": 290,
+        "y": 380,
+        "wires": [
+            [],
+            [
+                "5b7b6db4b5b96393",
+                "9087db5b47b44a01"
+            ]
+        ]
+    },
+    {
+        "id": "9087db5b47b44a01",
+        "type": "function",
+        "z": "c3934c17f980f0bf",
+        "name": "function 2",
+        "func": "console.log(\"vghb\",msg)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b5ebf1f23721cbb5",
+        "type": "inject",
+        "z": "0344cb8d958bc412",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 100,
+        "wires": [
+            [
+                "729173674c7137bd"
+            ]
+        ]
+    },
+    {
+        "id": "4be98ed4296b398c",
+        "type": "debug",
+        "z": "0344cb8d958bc412",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "729173674c7137bd",
+        "type": "SFTP-main",
+        "z": "0344cb8d958bc412",
+        "path": "/",
+        "method": "list",
+        "remoteFilePath": "/sftpdir/test",
+        "remoteFilePathType": "str",
+        "localFilePath": "C:\\Users\\Ayush Rarg\\OneDrive - actyv.ai\\Desktop\\node-red",
+        "localFilePathType": "str",
+        "server": "13066013742ff021",
+        "outputs": 1,
+        "debug": false,
+        "name": "lisitng the files from sftp",
+        "x": 390,
+        "y": 100,
+        "wires": [
+            [
+                "2f9dcf50fb0183cd"
+            ]
+        ]
+    },
+    {
+        "id": "2f9dcf50fb0183cd",
+        "type": "SFTP-main",
+        "z": "0344cb8d958bc412",
+        "path": "/",
+        "method": "get",
+        "remoteFilePath": "payload",
+        "remoteFilePathType": "msg",
+        "localFilePath": "/Users/shravanpm/Desktop/node-red",
+        "localFilePathType": "str",
+        "server": "13066013742ff021",
+        "outputs": 1,
+        "debug": false,
+        "name": "get a single file from sftp",
+        "x": 670,
+        "y": 100,
+        "wires": [
+            [
+                "9f12fc025689d955"
+            ]
+        ]
+    },
+    {
+        "id": "9f12fc025689d955",
+        "type": "file in",
+        "z": "0344cb8d958bc412",
+        "name": "",
+        "filename": "payload[0]",
+        "filenameType": "msg",
+        "format": "stream",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "utf8",
+        "allProps": false,
+        "x": 880,
+        "y": 100,
+        "wires": [
+            [
+                "5c69153fcf123b5b"
+            ]
+        ]
+    },
+    {
+        "id": "9e556186a05b8343",
+        "type": "comment",
+        "z": "0344cb8d958bc412",
+        "name": "read xlsx from sftp",
+        "info": "",
+        "x": 190,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "5ec3fed4818b489e",
+        "type": "comment",
+        "z": "0344cb8d958bc412",
+        "name": "check for csv/xlsx",
+        "info": "",
+        "x": 840,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "a0b104bbd47a8f5c",
+        "type": "comment",
+        "z": "0344cb8d958bc412",
+        "name": "scheduler",
+        "info": "execute every day",
+        "x": 180,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "ff53619365d74bac",
+        "type": "comment",
+        "z": "0344cb8d958bc412",
+        "name": "AWS S3",
+        "info": "Upload the incoming file to S3 ",
+        "x": 320,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "3eb2addcad06f23e",
+        "type": "comment",
+        "z": "0344cb8d958bc412",
+        "name": "move file",
+        "info": "check for the sucess folder existance\nif folder doesn't exist create folder\nmove the file to sucess folder",
+        "x": 460,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "f78fe8bd1866b6f3",
+        "type": "comment",
+        "z": "0344cb8d958bc412",
+        "name": "Trigger Api",
+        "info": "Store data in datasource config",
+        "x": 620,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "5c69153fcf123b5b",
+        "type": "book",
+        "z": "0344cb8d958bc412",
+        "name": "",
+        "raw": false,
+        "x": 1070,
+        "y": 100,
+        "wires": [
+            [
+                "38377249e09591c6"
+            ]
+        ]
+    },
+    {
+        "id": "38377249e09591c6",
+        "type": "sheet",
+        "z": "0344cb8d958bc412",
+        "name": "OUTSTANDING",
+        "sheetName": "Sheet1",
+        "x": 380,
+        "y": 180,
+        "wires": [
+            [
+                "bc163fdd5ac3ec95"
+            ]
+        ]
+    },
+    {
+        "id": "bc163fdd5ac3ec95",
+        "type": "sheet-to-json",
+        "z": "0344cb8d958bc412",
+        "name": "",
+        "raw": "false",
+        "range": "",
+        "header": "default",
+        "blankrows": false,
+        "x": 590,
+        "y": 180,
+        "wires": [
+            [
+                "4be98ed4296b398c"
+            ]
+        ]
+    }
+]
