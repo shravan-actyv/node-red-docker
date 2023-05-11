@@ -1,40 +1,3 @@
-// process.env.BANK_KEY =  "axis"
-// QA
-/*
-process.env.BANK_KEY =  "msl"
-process.env.GO_URL = "https://actyv-platform-go-service.qa.actyv.com"
-process.env.ADMIN_URL = "https://actyv-platform-admin-service.qa.actyv.com"
-process.env.PAYLATER_URL = "https://actyv-platform-paylater-service-v1.qa.actyv.com"
-process.env.PAYMENT_SERVICE_URL = "https://actyv-platform-payment-service.qa.actyv.com"
-// process.env.ADMIN_URL = "http://127.0.0.1:4001"
-process.env.EMAIL = "surajkumar@aplapollo.com"
-process.env.PASSWORD = "890ioP@12"
-process.env.LOCAL_PATH_LEAD_PUSH_AXIS = "/Users/shravanpm/Downloads/text"
-process.env.REMOTE_PATH_LEAD_PUSH_AXIS = "/sftpdir/test/shravan"
-process.env.X_ACTYV_API_CONFIG_KEY = "8HhkIWzVMSnSgvlhxr"
-process.env.OUTLOOKUSERID = "d9fbe739-c66b-4be8-91f3-5a39e282dcfb"
-process.env.BNPL_USER = "surajkumar@aplapollo.com"
-process.env.BNPL_USER_PASSWORD = "890ioP@12"
-process.env.BANK_PRODUCT_KEY = "axis-sabari-product"
-process.env.BANK_USER_EMAIL = "vivekanand.t@sgfinserv.in"
-process.env.BANK_USER_PASSWORD = "890ioP@12"
-process.env.ENTERPRISE_USER_EMAIL = "surajkumar@aplapollo.com"
-process.env.ENTERPRISE_USER_PASSWORD = "890ioP@12"
-process.env.ACTYV_ENTITY_USER_EMAIL = "anand.rastogi@actyv.com"
-process.env.ACTYV_ENTITY_USER_PASSWORD = "890ioP@12"
-process.env.IIFL_USER = "demoUser2"
-process.env.IIFL_USER_PASSWORD = "fc895Tbr2i&w@"
-process.env.IIFL_URL = "https://iifl-atlas-uat.finfluxtrial.io"
-process.env.FINFLUX_BASE_URL = "https://iifl-qa.finfluxtrial.io"
-process.env.FINFLUX_TOKEN = "6676d040-dc42-4621-854b-61160124c4cf"
-process.env.AXIS_LEAD_PUSH_APPLICATION_STATUS = "CREDIT_ANALYST_REVIEW"
-process.env.BANK_UNIQUE_IDENTIFIER = "AAACM5445J"
-process.env.REMOTE_PATH_IN = "/sftpdir/test/ramu/In/test";
-process.env.LOCAL_PATH = "/Users/shravanpm/Desktop/node-red";
-*/
-
-
-
 // UAT 
 process.env.ENV = "UAT"
 process.env.BANK_KEY =  "tatacapital"
@@ -56,6 +19,7 @@ process.env.BANK_PRODUCT_KEY_CKPL_IIFL = "cavinkare-iifl-PayLater"
 process.env.BANK_PRODUCT_KEY_CKPL_TC = "ckpl-TataCapital-PayLater"
 process.env.IIFL_BANK_APPLICATION_STATUS = "CREDIT_ANALYST_REVIEW"
 process.env.AXIS_BANK_ADMIN_EMAIL = "admin@axisbank.com"
+process.env.SGFL_BANK_ADMIN_EMAIL = "admin@axisbank.com"
 process.env.IIFL_BANK_ADMIN_EMAIL = "iifl_cap.uat@actyv.com"
 process.env.CKPL_BUSINESS_UNIQUE_IDENTIFIER = "AAACB3754B"
 // process.env.AXIS_BANK_ADMIN_PASSWORD = "890ioP@12"
@@ -76,8 +40,12 @@ process.env.FINFLUX_BASE_URL = "https://iifl-qa.finfluxtrial.io"
 process.env.FINFLUX_TOKEN = "6676d040-dc42-4621-854b-61160124c4cf"
 process.env.LOCAL_PATH = "/Users/shravanpm/Desktop/node-red";
 process.env.CKPL_CONFIG_KEY = "tc"
-
-
+process.env.DEFAULT_PASSWORD = "User@123";
+process.env.ACTYV_ADMIN_EMAIL = "darkhorse@gmail.com";
+process.env.ACTYV_ENTITY_URL = "https://actyv1-platform.uat.actyv.com";
+process.env.ACTYV_BP_URL = "https://platform.uat.actyv.com";
+process.env.ENVIRONMENT = "uat";
+process.env.SGFL_BANK_KEY =  "msl"
 
 /*
 // ****************** PROD *****************
@@ -499,7 +467,7 @@ module.exports = {
          * See https://github.com/node-red-contrib-themes/theme-collection for
          * a collection of themes to chose from.
          */
-        //theme: "",
+        // theme: "zenburn",
 
         /** To disable the 'Welcome to Node-RED' tour that is displayed the first
          * time you access the editor for each release of Node-RED, set this to false

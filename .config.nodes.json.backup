@@ -1063,5 +1063,63 @@
                 "file": "/Users/shravanpm/.node-red/node_modules/node-red-contrib-microsoft-auth/source/microsoftAuth.js"
             }
         }
+    },
+    "node-red-contrib-xmljson": {
+        "name": "node-red-contrib-xmljson",
+        "version": "0.0.3",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "xmljson": {
+                "name": "xmljson",
+                "types": [
+                    "xmljson"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-xmljson",
+                "file": "/Users/shravanpm/.node-red/node_modules/node-red-contrib-xmljson/lib/xmljson.js"
+            }
+        }
+    },
+    "node-red-contrib-axios": {
+        "name": "node-red-contrib-axios",
+        "version": "1.1.1",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "axios": {
+                "name": "axios",
+                "types": [
+                    "axios-endpoint",
+                    "axios-request"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-axios",
+                "file": "/Users/shravanpm/.node-red/node_modules/node-red-contrib-axios/src/axios.js"
+            }
+        }
+    },
+    "node-red-contrib-got": {
+        "name": "node-red-contrib-got",
+        "version": "1.0.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "got": {
+                "name": "got",
+                "types": [
+                    "got"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-got",
+                "file": "/Users/shravanpm/.node-red/node_modules/node-red-contrib-got/src/got.js"
+            }
+        }
     }
 }

@@ -1,8 +1,9 @@
 // process.env.BANK_KEY =  "axis"
 // QA
-/*
+
 process.env.BANK_KEY =  "msl"
-process.env.GO_URL = "https://actyv-platform-go-service.qa.actyv.com"
+process.env.SGFL_BANK_KEY =  "msl"
+process.env.GO_URL = "https://actyv-platform-go-service.qa.actyv.com/api"
 process.env.ADMIN_URL = "https://actyv-platform-admin-service.qa.actyv.com"
 process.env.PAYLATER_URL = "https://actyv-platform-paylater-service-v1.qa.actyv.com"
 process.env.PAYMENT_SERVICE_URL = "https://actyv-platform-payment-service.qa.actyv.com"
@@ -17,8 +18,13 @@ process.env.BNPL_USER = "surajkumar@aplapollo.com"
 process.env.BNPL_USER_PASSWORD = "890ioP@12"
 process.env.BANK_PRODUCT_KEY = "axis-sabari-product"
 process.env.BANK_USER_EMAIL = "vivekanand.t@sgfinserv.in"
+process.env.MSL_BANK_ADMIN_EMAIL = "vivekanand.t@sgfinserv.in"
+process.env.SGFL_BANK_ADMIN_EMAIL = "vivekanand.t@sgfinserv.in"
+process.env.BP_ADMIN_EMAIL = "shridurgametalex@gmail.com"
 process.env.BANK_USER_PASSWORD = "890ioP@12"
 process.env.ENTERPRISE_USER_EMAIL = "surajkumar@aplapollo.com"
+process.env.APL_ENTERPRISE_ADMIN_EMAIL = "surajkumar@aplapollo.com"
+process.env.SGFL_EXXARO_BP_EMAIL = "shridurgametalex@gmail.com"
 process.env.ENTERPRISE_USER_PASSWORD = "890ioP@12"
 process.env.ACTYV_ENTITY_USER_EMAIL = "anand.rastogi@actyv.com"
 process.env.ACTYV_ENTITY_USER_PASSWORD = "890ioP@12"
@@ -29,20 +35,27 @@ process.env.FINFLUX_BASE_URL = "https://iifl-qa.finfluxtrial.io"
 process.env.FINFLUX_TOKEN = "6676d040-dc42-4621-854b-61160124c4cf"
 process.env.AXIS_LEAD_PUSH_APPLICATION_STATUS = "CREDIT_ANALYST_REVIEW"
 process.env.BANK_UNIQUE_IDENTIFIER = "AAACM5445J"
+process.env.ENTERPRISE_UNIQUE_IDENTIFIER = "ABBCB2066P"
 process.env.REMOTE_PATH_IN = "/sftpdir/test/ramu/In/test";
 process.env.LOCAL_PATH = "/Users/shravanpm/Desktop/node-red";
-*/
+process.env.DEFAULT_PASSWORD = "User@123";
+process.env.ACTYV_ADMIN_EMAIL = "darkhorse@gmail.com";
+process.env.ACTYV_ENTITY_URL = "https://actyv1-platform.qa.actyv.com";
+process.env.ACTYV_BP_URL = "https://platform.qa.actyv.com";
+process.env.ENVIRONMENT = "qa";
 
 
 
+
+/*
 // UAT 
-process.env.ENV = "UAT"
 process.env.BANK_KEY =  "tatacapital"
 process.env.GO_URL = "https://actyv-platform-go-service.uat.actyv.com/api"
 process.env.ADMIN_URL = "https://actyv-platform-admin-service.uat.actyv.com"
 process.env.PAYLATER_URL = "https://actyv-platform-paylater-service-v1.uat.actyv.com"
 process.env.PAYMENT_SERVICE_URL = "https://actyv-platform-payment-service.uat.actyv.com"
 // process.env.ADMIN_URL = "http://127.0.0.1:4001"
+process.env.ENV = "QA"
 process.env.EMAIL = "surajkumar@aplapollo.com"
 process.env.PASSWORD = "890ioP@12"
 process.env.LOCAL_PATH_LEAD_PUSH_AXIS = "/Users/shravanpm/Downloads/text"
@@ -76,7 +89,7 @@ process.env.FINFLUX_BASE_URL = "https://iifl-qa.finfluxtrial.io"
 process.env.FINFLUX_TOKEN = "6676d040-dc42-4621-854b-61160124c4cf"
 process.env.LOCAL_PATH = "/Users/shravanpm/Desktop/node-red";
 process.env.CKPL_CONFIG_KEY = "tc"
-
+*/
 
 
 /*
@@ -499,7 +512,7 @@ module.exports = {
          * See https://github.com/node-red-contrib-themes/theme-collection for
          * a collection of themes to chose from.
          */
-        //theme: "",
+        // theme: "solarized-light",
 
         /** To disable the 'Welcome to Node-RED' tour that is displayed the first
          * time you access the editor for each release of Node-RED, set this to false

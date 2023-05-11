@@ -1,0 +1,38 @@
+{
+    "moment": {
+        "spec": "moment",
+        "module": "moment",
+        "builtin": false,
+        "known": false
+    },
+    "lodash": {
+        "spec": "lodash",
+        "module": "lodash",
+        "builtin": false,
+        "known": false
+    },
+    "axios": {
+        "spec": "axios",
+        "module": "axios",
+        "builtin": false,
+        "known": false
+    },
+    "xlsx": {
+        "spec": "xlsx",
+        "module": "xlsx",
+        "builtin": false,
+        "known": false
+    },
+    "ssh2-sftp-client": {
+        "spec": "ssh2-sftp-client",
+        "module": "ssh2-sftp-client",
+        "builtin": false,
+        "known": false
+    },
+    "json2xls": {
+        "spec": "json2xls",
+        "module": "json2xls",
+        "builtin": false,
+        "known": false
+    }
+}
