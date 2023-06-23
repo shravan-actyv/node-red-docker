@@ -17,6 +17,7 @@ process.env.BNPL_USER_PASSWORD = "890ioP@12"
 process.env.BANK_PRODUCT_KEY_CKPL_AXIS = "cavinkare-AxisBank-PayLater"
 process.env.BANK_PRODUCT_KEY_CKPL_IIFL = "cavinkare-iifl-PayLater"
 process.env.BANK_PRODUCT_KEY_CKPL_TC = "ckpl-TataCapital-PayLater"
+process.env.BANK_PRODUCT_KEY_CAVINKARE_TATA_CAPITAL = "ckpl-TataCapital-PayLater"
 process.env.IIFL_BANK_APPLICATION_STATUS = "CREDIT_ANALYST_REVIEW"
 process.env.AXIS_BANK_ADMIN_EMAIL = "admin@axisbank.com"
 process.env.SGFL_BANK_ADMIN_EMAIL = "admin@axisbank.com"
@@ -41,11 +42,14 @@ process.env.FINFLUX_TOKEN = "6676d040-dc42-4621-854b-61160124c4cf"
 process.env.LOCAL_PATH = "/Users/shravanpm/Desktop/node-red";
 process.env.CKPL_CONFIG_KEY = "tc"
 process.env.DEFAULT_PASSWORD = "User@123";
+process.env.ACTYV_ADMIN_PASSWORD = "User@123";
 process.env.ACTYV_ADMIN_EMAIL = "darkhorse@gmail.com";
 process.env.ACTYV_ENTITY_URL = "https://actyv1-platform.uat.actyv.com";
 process.env.ACTYV_BP_URL = "https://platform.uat.actyv.com";
 process.env.ENVIRONMENT = "uat";
 process.env.SGFL_BANK_KEY =  "msl"
+process.env.DEMO_CONFIG_KEY = "demo"
+process.env.CAMUNDA_BASE_URL = "http://65.1.196.116:8080";
 
 /*
 // ****************** PROD *****************

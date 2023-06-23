@@ -28,5 +28,23 @@
         "module": "ssh2-sftp-client",
         "builtin": false,
         "known": false
+    },
+    "json2xls": {
+        "spec": "json2xls",
+        "module": "json2xls",
+        "builtin": false,
+        "known": false
+    },
+    "uuid": {
+        "spec": "uuid",
+        "module": "uuid",
+        "builtin": false,
+        "known": false
+    },
+    "fast-xml-parser": {
+        "spec": "fast-xml-parser",
+        "module": "fast-xml-parser",
+        "builtin": false,
+        "known": false
     }
 }

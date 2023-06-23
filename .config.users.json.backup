@@ -17,13 +17,13 @@
             }
         },
         "debug": {
-            "filter": "filterAll",
+            "filter": "filterCurrent",
             "filteredNodes": [
                 "4be98ed4296b398c"
             ]
         },
-        "menu-menu-item-sidebar": true,
-        "menu-deploymenu-item-flow": false,
-        "menu-deploymenu-item-full": true
+        "menu-menu-item-sidebar": false,
+        "menu-deploymenu-item-flow": true,
+        "menu-deploymenu-item-full": false
     }
 }

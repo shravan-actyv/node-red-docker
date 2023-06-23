@@ -6,6 +6,12 @@ process.env.SGFL_BANK_KEY =  "msl"
 process.env.GO_URL = "https://actyv-platform-go-service.dev.actyv.com/api"
 process.env.ADMIN_URL = "https://actyv-platform-admin-service.dev.actyv.com"
 process.env.PAYLATER_URL = "https://actyv-platform-paylater-service-v1.dev.actyv.com"
+//## LOCAL
+process.env.GO_URL = "http://localhost:4003/api"
+process.env.ADMIN_URL = "https://actyv-platform-admin-service.dev.actyv.com"
+process.env.PAYLATER_URL = "http://localhost:3000"
+
+
 process.env.PAYMENT_SERVICE_URL = "https://actyv-platform-payment-service.dev.actyv.com"
 // process.env.ADMIN_URL = "http://127.0.0.1:4001"
 process.env.EMAIL = "surajkumar@aplapollo.com"
@@ -172,7 +178,7 @@ module.exports = {
  ******************************************************************************/
 
     /** The file containing the flows. If not set, defaults to flows_<hostname>.json **/
-    flowFile: 'flows.json',
+    flowFile: 'testflows.json',
 
     /** By default, credentials are encrypted in storage using a generated key. To
      * specify your own secret, set the following property.

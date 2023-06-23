@@ -34,5 +34,23 @@
         "module": "json2xls",
         "builtin": false,
         "known": false
+    },
+    "uuid": {
+        "spec": "uuid",
+        "module": "uuid",
+        "builtin": false,
+        "known": false
+    },
+    "fast-xml-parser": {
+        "spec": "fast-xml-parser",
+        "module": "fast-xml-parser",
+        "builtin": false,
+        "known": false
+    },
+    "json-2-csv": {
+        "spec": "json-2-csv",
+        "module": "json-2-csv",
+        "builtin": false,
+        "known": false
     }
 }

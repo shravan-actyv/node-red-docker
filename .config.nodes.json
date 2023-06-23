@@ -1121,5 +1121,103 @@
                 "file": "/Users/shravanpm/.node-red/node_modules/node-red-contrib-got/src/got.js"
             }
         }
+    },
+    "node-red-contrib-json2csv": {
+        "name": "node-red-contrib-json2csv",
+        "version": "0.0.3",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "json-2-csv": {
+                "name": "json-2-csv",
+                "types": [
+                    "json-2-csv"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-json2csv",
+                "file": "/Users/shravanpm/.node-red/node_modules/node-red-contrib-json2csv/nodes/v1.js"
+            }
+        }
+    },
+    "node-red-contrib-loop": {
+        "name": "node-red-contrib-loop",
+        "version": "1.0.1",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "loop": {
+                "name": "loop",
+                "types": [
+                    "loop"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-loop",
+                "file": "/Users/shravanpm/.node-red/node_modules/node-red-contrib-loop/loop.js"
+            }
+        }
+    },
+    "node-red-aws-tools": {
+        "name": "node-red-aws-tools",
+        "version": "0.0.3",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "amazon cognito": {
+                "name": "amazon cognito",
+                "types": [
+                    "amazon cognito"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-aws-tools",
+                "file": "/Users/shravanpm/.node-red/node_modules/node-red-aws-tools/cognito.js"
+            },
+            "amazon ses": {
+                "name": "amazon ses",
+                "types": [
+                    "amazon ses"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-aws-tools",
+                "file": "/Users/shravanpm/.node-red/node_modules/node-red-aws-tools/ses.js"
+            },
+            "config": {
+                "name": "config",
+                "types": [
+                    "config"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-aws-tools",
+                "file": "/Users/shravanpm/.node-red/node_modules/node-red-aws-tools/config.js"
+            }
+        }
+    },
+    "node-red-contrib-pdf": {
+        "name": "node-red-contrib-pdf",
+        "version": "0.1.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "pdf": {
+                "name": "pdf",
+                "types": [
+                    "HTML-PDF"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-pdf",
+                "file": "/Users/shravanpm/.node-red/node_modules/node-red-contrib-pdf/pdf.js"
+            }
+        }
     }
 }

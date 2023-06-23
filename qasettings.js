@@ -7,6 +7,11 @@ process.env.GO_URL = "https://actyv-platform-go-service.qa.actyv.com/api"
 process.env.ADMIN_URL = "https://actyv-platform-admin-service.qa.actyv.com"
 process.env.PAYLATER_URL = "https://actyv-platform-paylater-service-v1.qa.actyv.com"
 process.env.PAYMENT_SERVICE_URL = "https://actyv-platform-payment-service.qa.actyv.com"
+
+//## LOCAL
+// process.env.GO_URL = "http://localhost:4003/api"
+// process.env.ADMIN_URL = "https://actyv-platform-admin-service.qa.actyv.com"
+// process.env.PAYLATER_URL = "http://localhost:3000"
 // process.env.ADMIN_URL = "http://127.0.0.1:4001"
 process.env.EMAIL = "surajkumar@aplapollo.com"
 process.env.PASSWORD = "890ioP@12"
@@ -17,6 +22,7 @@ process.env.OUTLOOKUSERID = "d9fbe739-c66b-4be8-91f3-5a39e282dcfb"
 process.env.BNPL_USER = "surajkumar@aplapollo.com"
 process.env.BNPL_USER_PASSWORD = "890ioP@12"
 process.env.BANK_PRODUCT_KEY = "axis-sabari-product"
+process.env.AXIS_CKPL_BANK_PRODUCT_KEY = "axis-ckpl-product"
 process.env.BANK_USER_EMAIL = "vivekanand.t@sgfinserv.in"
 process.env.MSL_BANK_ADMIN_EMAIL = "vivekanand.t@sgfinserv.in"
 process.env.SGFL_BANK_ADMIN_EMAIL = "vivekanand.t@sgfinserv.in"
@@ -36,105 +42,24 @@ process.env.FINFLUX_TOKEN = "6676d040-dc42-4621-854b-61160124c4cf"
 process.env.AXIS_LEAD_PUSH_APPLICATION_STATUS = "CREDIT_ANALYST_REVIEW"
 process.env.BANK_UNIQUE_IDENTIFIER = "AAACM5445J"
 process.env.ENTERPRISE_UNIQUE_IDENTIFIER = "ABBCB2066P"
+process.env.APL_BUSINESS_UNIQUE_IDENTIFIER = "ABBCB2066P"
+process.env.APL_PIPES_CONFIG_KEY = "apl"
 process.env.REMOTE_PATH_IN = "/sftpdir/test/ramu/In/test";
 process.env.LOCAL_PATH = "/Users/shravanpm/Desktop/node-red";
 process.env.DEFAULT_PASSWORD = "User@123";
+process.env.ACTYV_ADMIN_PASSWORD = "User@123";
 process.env.ACTYV_ADMIN_EMAIL = "darkhorse@gmail.com";
 process.env.ACTYV_ENTITY_URL = "https://actyv1-platform.qa.actyv.com";
 process.env.ACTYV_BP_URL = "https://platform.qa.actyv.com";
 process.env.ENVIRONMENT = "qa";
-
-
-
-
-/*
-// UAT 
-process.env.BANK_KEY =  "tatacapital"
-process.env.GO_URL = "https://actyv-platform-go-service.uat.actyv.com/api"
-process.env.ADMIN_URL = "https://actyv-platform-admin-service.uat.actyv.com"
-process.env.PAYLATER_URL = "https://actyv-platform-paylater-service-v1.uat.actyv.com"
-process.env.PAYMENT_SERVICE_URL = "https://actyv-platform-payment-service.uat.actyv.com"
-// process.env.ADMIN_URL = "http://127.0.0.1:4001"
-process.env.ENV = "QA"
-process.env.EMAIL = "surajkumar@aplapollo.com"
-process.env.PASSWORD = "890ioP@12"
-process.env.LOCAL_PATH_LEAD_PUSH_AXIS = "/Users/shravanpm/Downloads/text"
-process.env.REMOTE_PATH_LEAD_PUSH_AXIS = "/sftpdir/test/shravan"
-process.env.X_ACTYV_API_CONFIG_KEY = "8HhkIWzVMSnSgvlhxr"
-process.env.OUTLOOKUSERID = "d9fbe739-c66b-4be8-91f3-5a39e282dcfb"
-process.env.BNPL_USER = "surajkumar@aplapollo.com"
-process.env.BNPL_USER_PASSWORD = "890ioP@12"
-process.env.BANK_PRODUCT_KEY_CKPL_AXIS = "cavinkare-AxisBank-PayLater"
-process.env.BANK_PRODUCT_KEY_CKPL_IIFL = "cavinkare-iifl-PayLater"
-process.env.BANK_PRODUCT_KEY_CKPL_TC = "ckpl-TataCapital-PayLater"
-process.env.IIFL_BANK_APPLICATION_STATUS = "CREDIT_ANALYST_REVIEW"
-process.env.AXIS_BANK_ADMIN_EMAIL = "admin@axisbank.com"
-process.env.IIFL_BANK_ADMIN_EMAIL = "iifl_cap.uat@actyv.com"
 process.env.CKPL_BUSINESS_UNIQUE_IDENTIFIER = "AAACB3754B"
-// process.env.AXIS_BANK_ADMIN_PASSWORD = "890ioP@12"
-process.env.CKPL_ENTERPRISE_ADMIN_EMAIL = "admin@cavinkare.com"
-process.env.PASSWORD = "890ioP@12"
-process.env.ACTYV_ENTITY_USER_EMAIL = "anand.rastogi@actyv.com"
-process.env.ACTYV_ENTITY_USER_PASSWORD = "890ioP@12"
-process.env.IIFL_USER = "demoUser2"
-process.env.IIFL_USER_PASSWORD = "fc895Tbr2i&w@"
-process.env.IIFL_URL = "https://iifl-atlas-uat.finfluxtrial.io"
-process.env.FINFLUX_BASE_URL = "https://iifl-qa.finfluxtrial.io"
-process.env.FINFLUX_TOKEN = "6676d040-dc42-4621-854b-61160124c4cf"
-process.env.AXIS_LEAD_PUSH_APPLICATION_STATUS = "CREDIT_ANALYST_REVIEW"
-process.env.IIFL_USER = "demoUser2"
-process.env.IIFL_USER_PASSWORD = "fc895Tbr2i&w@"
-process.env.IIFL_URL = "https://iifl-atlas-uat.finfluxtrial.io"
-process.env.FINFLUX_BASE_URL = "https://iifl-qa.finfluxtrial.io"
-process.env.FINFLUX_TOKEN = "6676d040-dc42-4621-854b-61160124c4cf"
-process.env.LOCAL_PATH = "/Users/shravanpm/Desktop/node-red";
+process.env.NIVEA_BUSINESS_UNIQUE_IDENTIFIER = "29AACCN1990P1ZR"
 process.env.CKPL_CONFIG_KEY = "tc"
-*/
+// process.env.CAMUNDA_BASE_URL = "http://localhost:8080";
+process.env.CAMUNDA_BASE_URL = "http://3.7.184.73:8080";
 
 
-/*
-// ****************** PROD *****************
-process.env.PAYLATER_URL =
-  "https://actyv-platform-paylater-service-v1.prod.actyv.com";
-  // "http://localhost:3000"
-process.env.GO_URL = "https://actyv-platform-go-service.prod.actyv.com/api";
-process.env.ADMIN_URL = "https://actyv-platform-admin-service.prod.actyv.com";
-// process.env.CAMUNDA_BASE_URL = "http://3.7.184.73:8080";
 
-process.env.AXIS_BANK_KEY = "axis"
-process.env.BUSINESS_IDENTIFIER = "AAABBBCCC";
-process.env.BUSINESS_TYPE = "ENTERPRISE";
-process.env.BANK_PRODUCT_KEY_CAVINKARE_AXIS = "ckpl-axis-PayLater";
-process.env.X_ACTYV_API_CONFIG_KEY = "q8xxKYd2pWu1G2MNXu";
-process.env.BANK_UNIQUE_IDENTIFIER = "FYDPK7823L";
-process.env.AXIS_BANK_UNIQUE_IDENTIFIER = "AAACU2414K";
-process.env.PASSWORD = "890ioP@12";
-
-process.env.AXIS_BANK_ADMIN_EMAIL = "axisadmin@actyv.com"
-process.env.CKPL_ENTERPRISE_ADMIN_EMAIL = "admin@cavinkare.com"
-process.env.CKPL_CONFIG_KEY = "ckpl"
-process.env.CKPL_BUSINESS_UNIQUE_IDENTIFIER = "AAACB3754B"
-
-
-// process.env.CONFIG_KEY = "apl-pipe";
-process.env.CONFIG_KEY = "tc";
-process.env.REMOTE_PATH_OUT = "/sftpdir/test/ramu/Out";
-process.env.REMOTE_PATH_IN = "/sftpdir/test/ramu/In";
-process.env.LOCAL_PATH = "/Users/shravanpm/Desktop/node-red";
-process.env.SFTP_SUCCESS_FOLDER = "/sftpdir/test/ramu/Out/success";
-process.env.SFTP_FAILURE_FOLDER = "/sftpdir/test/ramu/Out/failure";
-
-process.env.BENEFICIARY_NAME = "Sabari Distribution Pvt Ltd";
-process.env.BENEFICIARY_ACCOUNT_NUMBER = "000210100001051";
-process.env.BENEFICIARY_BANK_NAME = "Dhanlaxmi Bank";
-process.env.BENEFICIARY_IFSC = "DLXB0000059";
-
-process.env.SFTP_HOST = "s2fs.axisbank.com";
-process.env.SFTP_USERNAME = "Actyv_Onbaording";
-process.env.SFTP_PASSWORD = "India@2023";
-process.env.SFTP_PORT = 22;
-
-*/
 
 
 /**http://127.0.0.1:1880/#flow/fa2eca1ddc6f15db
@@ -501,7 +426,7 @@ module.exports = {
      * is not affected by this option. To disable both the editor and the admin
      * API, use either the httpRoot or httpAdminRoot properties
      */
-    //disableEditor: false,
+    disableEditor: false,
 
     /** Customising the editor
      * See https://nodered.org/docs/user-guide/runtime/configuration#editor-themes
@@ -517,7 +442,7 @@ module.exports = {
         /** To disable the 'Welcome to Node-RED' tour that is displayed the first
          * time you access the editor for each release of Node-RED, set this to false
          */
-        //tours: false,
+        tours: false,
 
         palette: {
             /** The following property can be used to order the categories in the editor
@@ -602,16 +527,8 @@ module.exports = {
      *    global.get("os")
      */
     functionGlobalContext: {
-        // os:require('os'),
-        fs: require("fs"),
-        "pdf": require("pdf-lib"),
-        exec : require('child_process').exec,
-        scissors: require("scissors"),
-        jszip : require('jszip'),
-        splitFile:require("split-file"),
-        pdftk : require("node-pdftk"),
-        assert : require('assert'),
-        sftp : require('@ramu_actyv/better-sftp'),
+        
+       
     },
 
     /** The maximum number of messages nodes will buffer internally as part of their
@@ -630,7 +547,7 @@ module.exports = {
     //ui: { path: "ui" },
 
     /** Colourise the console output of the debug node */
-    //debugUseColors: true,
+    debugUseColors: true,
 
     /** The maximum length, in characters, of any message sent to the debug sidebar tab */
     debugMaxLength: 1000,
